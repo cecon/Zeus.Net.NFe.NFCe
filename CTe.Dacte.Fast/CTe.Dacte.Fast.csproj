@@ -1,9 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net462</TargetFrameworks>
-		
-	</PropertyGroup>
+    <TargetFrameworks>net462</TargetFrameworks>
+    <PackageId>CTe.Dacte.Fast</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SeuNome</Authors>
+    <Description>CTe.Dacte.Fast</Description>
+    <PackageTags>cte;dact;fast</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/cecon/Zeus.Net.NFe.NFCe</RepositoryUrl>
+  </PropertyGroup>
 
 	<!--Todos que iniciam com 4... -->
 	<ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">

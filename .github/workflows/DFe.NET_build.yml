@@ -106,13 +106,4 @@ jobs:
       - name: Push to NuGet Feed
         run: dotnet nuget push *.nupkg -k $NUGET_AUTH_TOKEN -s https://api.nuget.org/v3/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{secrets.NUGET_SECRET_DEPLOY}}
-          
-      - name: Discord notification
-        continue-on-error: true
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_MENSAGEM: ${{ needs.build.outputs.version }}
-        uses: Ilshidur/action-discord@master
-        with:
-          args: 'Lançado Zeus DFe.NET versão {{ DISCORD_MENSAGEM }} no Nuget! Acesse: https://www.nuget.org/profiles/ZeusNfeNfce'
+          NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}                
